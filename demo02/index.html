@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>React - render </title>
+	<script src="../build/react.js"></script>
+	<script src="../build/react-dom.js"></script>
+	<script src="../build/browser.min.js"></script>
+</head>
+<body>
+	<div id="container"></div>
+	<script type="text/babel">
+	//ReactDOM.render(),是react的最基本的语法，将模版转换成HTML，并插入到指定的DOM节点中
+		var names = ['cattle', 'jackjson', 'kate'];
+		ReactDOM.render(
+			<div>
+				{
+					names.map(function(name){
+						return <div>hello, {name}</div>
+					})
+				}
+			</div>,
+			document.getElementById('container')
+
+		);
+	</script>
+</body>
+</html>
